@@ -1,0 +1,102 @@
+%text-tetle{
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    color: azure;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+%price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 1px;
+    width: 100%;
+    height: 12vh;
+}
+
+
+.blockCards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px;
+    width: 18%;
+
+
+    .tblue{
+        background-color: rgb(80, 153, 153);
+        @extend %text-tetle;
+    }
+
+    .tgreen{
+        background-color: rgb(83, 112, 85);
+        @extend %text-tetle;
+    }
+
+    .tred{
+        background-color: rgb(207, 67, 67);
+        @extend %text-tetle;
+    }
+
+    .tblack{
+        background-color: rgb(27, 26, 26);
+        @extend %text-tetle;
+    }
+
+    .blue{
+        @extend %price;
+        background-color: rgb(83, 166, 214);
+    }
+    .green{
+        @extend %price;
+        background-color: rgb(122, 156, 122);
+    }
+
+    .red{
+        @extend %price;
+        background-color: rgb(241, 112, 112);
+    }
+
+
+    .black{
+        @extend %price;
+        background-color: rgb(70, 65, 65);
+    }
+
+    span {
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    .colorText{
+        transform: translate(-5px, -20px);
+    }
+
+    .blockInfo{
+        background-color: rgb(229, 232, 235);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .info{
+        width: 90%;
+        text-align: center;
+    }
+
+    .speed {
+        background-color: white;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.active{
+    transform: scale(1.1, 1.1);
+    box-shadow: 8px 5px 5px grey, -8px 5px 5px grey;
+}
