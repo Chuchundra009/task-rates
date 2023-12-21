@@ -1,8 +1,11 @@
 
+import { useState } from 'react'
 import Cards from './components/Cards/Cards'
 import './style/App.css'
 
 function App() {
+
+  const [id, setId] = useState(0);
 
   const arrText = [
     {
@@ -24,8 +27,8 @@ function App() {
       price: 550,
       speed: 100,
       color: 'red',
-      titleColor:'tred',
-      position: 'active'
+      titleColor:'tred'
+      // position: 'active'
     },
     {
       id:4,
@@ -39,7 +42,12 @@ function App() {
 
   return (
     <div className='container'>
-      {arrText.map(item =><Cards {...item} key={item.id}/> )}
+      {arrText.map(item =><Cards
+      {...item}
+      key={item.id}
+      activeCards={item.id === id}
+      setId={setId}
+      /> )}
     </div>
   )
 }
